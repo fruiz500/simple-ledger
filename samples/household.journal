@@ -1,0 +1,625 @@
+; sb:book name:"Rivera Household (sample)" template:household fy-start:01
+
+commodity $1,000.00
+
+account Assets:Bank:Checking          ; type:Asset
+account Assets:Bank:Savings           ; type:Asset
+account Assets:Cash                   ; type:Asset
+account Equity:Opening Balances       ; type:Equity
+account Expenses:Bank Fees            ; type:Expense
+account Expenses:Dining               ; type:Expense
+account Expenses:Education            ; type:Expense
+account Expenses:Entertainment        ; type:Expense
+account Expenses:Gifts and Donations  ; type:Expense
+account Expenses:Groceries            ; type:Expense
+account Expenses:Health               ; type:Expense
+account Expenses:Housing              ; type:Expense
+account Expenses:Insurance            ; type:Expense
+account Expenses:Other                ; type:Expense
+account Expenses:Taxes                ; type:Expense
+account Expenses:Transportation       ; type:Expense
+account Expenses:Utilities            ; type:Expense
+account Income:Interest               ; type:Revenue
+account Income:Other                  ; type:Revenue
+account Income:Salary                 ; type:Revenue
+account Liabilities:Credit Card       ; type:Liability
+account Liabilities:Loans             ; type:Liability
+
+payee City Power & Light
+payee Dr. Okafor
+payee Farmers Co-op
+payee FiberNet
+payee First Bank
+payee Green Grocer
+payee Hometown Mortgage
+payee MegaMart
+payee Metro Water
+payee Northwind Corp
+payee Opening balances
+payee Savings transfer
+payee Shell
+payee Streamly
+payee Trattoria Roma
+
+2026-05-01 Hometown Mortgage | Mortgage  ; id:t5vjqy
+    Assets:Bank:Checking                  $-1,850.00
+    Expenses:Housing                       $1,850.00
+
+2026-05-01 Northwind Corp | Paycheck  ; id:tg71sy
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-05-03 Green Grocer | Groceries  ; id:tqx8hu
+    Liabilities:Credit Card                  $-87.90
+    Expenses:Groceries                        $87.90
+
+2026-05-04 Opening balances  ; id:tvdz0p
+    Assets:Bank:Checking                   $4,200.00
+    Assets:Bank:Savings                   $12,000.00
+    Liabilities:Credit Card                 $-650.00
+    Equity:Opening Balances              $-15,550.00
+
+2026-05-05 City Power & Light | Electric  ; id:the3zg
+    Assets:Bank:Checking                     $-75.00
+    Expenses:Utilities                        $75.00
+
+2026-05-08 Metro Water | Water  ; id:tgidhu
+    Assets:Bank:Checking                     $-53.42
+    Expenses:Utilities                        $53.42
+
+2026-05-10 Farmers Co-op | Groceries  ; id:trocht
+    Liabilities:Credit Card                 $-132.00
+    Expenses:Groceries                       $132.00
+
+2026-05-10 Trattoria Roma | Dinner  ; id:to7b3w
+    Liabilities:Credit Card                  $-82.60
+    Expenses:Dining                           $82.60
+
+2026-05-12 FiberNet | Internet  ; id:twmyfg
+    Assets:Bank:Checking                     $-79.99
+    Expenses:Utilities                        $79.99
+
+2026-05-14 Streamly | Subscription  ; id:tt4p4z
+    Liabilities:Credit Card                  $-15.99
+    Expenses:Entertainment                    $15.99
+
+2026-05-15 Northwind Corp | Paycheck  ; id:t7jx5y
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-05-17 MegaMart | Groceries  ; id:tamgpw
+    Liabilities:Credit Card                 $-115.28
+    Expenses:Groceries                       $115.28
+
+2026-05-18 (1201) Dr. Okafor | Copay  ; id:tcg1mo
+    Assets:Bank:Checking                     $-40.00
+    Expenses:Health                           $40.00
+
+2026-05-20 Savings transfer | To savings  ; id:tkbob4
+    Assets:Bank:Checking                    $-400.00
+    Assets:Bank:Savings                      $400.00
+
+2026-05-22 Shell | Gas  ; id:t7cgpz
+    Liabilities:Credit Card                  $-53.88
+    Expenses:Transportation                   $53.88
+
+2026-05-24 Green Grocer | Groceries  ; id:tkd8km
+    Liabilities:Credit Card                  $-97.99
+    Expenses:Groceries                        $97.99
+
+2026-05-27 First Bank | Card payment  ; id:takrmv
+    Assets:Bank:Checking                    $-522.31
+    Liabilities:Credit Card                  $522.31
+
+2026-05-28 First Bank | Interest  ; id:tn0gn9
+    Assets:Bank:Savings                        $4.09
+    Income:Interest                           $-4.09
+
+2026-06-01 Hometown Mortgage | Mortgage  ; id:tss0f3
+    Assets:Bank:Checking                  $-1,850.00
+    Expenses:Housing                       $1,850.00
+
+2026-06-01 Northwind Corp | Paycheck  ; id:toi9c6
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-06-03 Green Grocer | Groceries  ; id:t8cmfy
+    Liabilities:Credit Card                  $-90.57
+    Expenses:Groceries                        $90.57
+
+2026-06-05 City Power & Light | Electric  ; id:tq8u5v
+    Assets:Bank:Checking                    $-116.07
+    Expenses:Utilities                       $116.07
+
+2026-06-08 Metro Water | Water  ; id:tm5q2u
+    Assets:Bank:Checking                     $-47.72
+    Expenses:Utilities                        $47.72
+
+2026-06-10 Farmers Co-op | Groceries  ; id:tlu4vb
+    Liabilities:Credit Card                 $-101.81
+    Expenses:Groceries                       $101.81
+
+2026-06-10 Trattoria Roma | Dinner  ; id:t68oep
+    Liabilities:Credit Card                  $-47.69
+    Expenses:Dining                           $47.69
+
+2026-06-12 FiberNet | Internet  ; id:t4qnmu
+    Assets:Bank:Checking                     $-79.99
+    Expenses:Utilities                        $79.99
+
+2026-06-14 Streamly | Subscription  ; id:tz3zjw
+    Liabilities:Credit Card                  $-15.99
+    Expenses:Entertainment                    $15.99
+
+2026-06-15 Northwind Corp | Paycheck  ; id:tsernx
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-06-17 MegaMart | Groceries  ; id:tj1b6k
+    Liabilities:Credit Card                 $-130.17
+    Expenses:Groceries                       $130.17
+
+2026-06-18 (1202) Dr. Okafor | Copay  ; id:th449c
+    Assets:Bank:Checking                     $-40.00
+    Expenses:Health                           $40.00
+
+2026-06-20 Savings transfer | To savings  ; id:ts5ed8
+    Assets:Bank:Checking                    $-400.00
+    Assets:Bank:Savings                      $400.00
+
+2026-06-22 Shell | Gas  ; id:tmp0op
+    Liabilities:Credit Card                  $-52.10
+    Expenses:Transportation                   $52.10
+
+2026-06-24 Green Grocer | Groceries  ; id:tt64z6
+    Liabilities:Credit Card                 $-129.33
+    Expenses:Groceries                       $129.33
+
+2026-06-27 First Bank | Card payment  ; id:tc4qps
+    Assets:Bank:Checking                    $-654.19
+    Liabilities:Credit Card                  $654.19
+
+2026-06-28 First Bank | Interest  ; id:tuperw
+    Assets:Bank:Savings                        $3.94
+    Income:Interest                           $-3.94
+
+2026-07-01 Hometown Mortgage | Mortgage  ; id:t3aww2
+    Assets:Bank:Checking                  $-1,850.00
+    Expenses:Housing                       $1,850.00
+
+2026-07-01 Northwind Corp | Paycheck  ; id:tnkya0
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-07-03 Green Grocer | Groceries  ; id:tn32df
+    Liabilities:Credit Card                 $-113.61
+    Expenses:Groceries                       $113.61
+
+2026-07-05 City Power & Light | Electric  ; id:t8zvzh
+    Assets:Bank:Checking                    $-130.34
+    Expenses:Utilities                       $130.34
+
+2026-07-08 Metro Water | Water  ; id:txnbvb
+    Assets:Bank:Checking                     $-51.15
+    Expenses:Utilities                        $51.15
+
+2026-07-10 Farmers Co-op | Groceries  ; id:tab8nr
+    Liabilities:Credit Card                 $-148.47
+    Expenses:Groceries                       $148.47
+
+2026-07-10 Trattoria Roma | Dinner  ; id:tshc0r
+    Liabilities:Credit Card                  $-73.87
+    Expenses:Dining                           $73.87
+
+2026-07-12 FiberNet | Internet  ; id:td4mpk
+    Assets:Bank:Checking                     $-79.99
+    Expenses:Utilities                        $79.99
+
+2026-07-14 Streamly | Subscription  ; id:tc6j0d
+    Liabilities:Credit Card                  $-15.99
+    Expenses:Entertainment                    $15.99
+
+2026-07-15 Northwind Corp | Paycheck  ; id:tmj75r
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-07-17 MegaMart | Groceries  ; id:ti8w3h
+    Liabilities:Credit Card                 $-128.52
+    Expenses:Groceries                       $128.52
+
+2026-07-18 (1203) Dr. Okafor | Copay  ; id:trmczs
+    Assets:Bank:Checking                     $-40.00
+    Expenses:Health                           $40.00
+
+2026-07-20 Savings transfer | To savings  ; id:tzzqma
+    Assets:Bank:Checking                    $-400.00
+    Assets:Bank:Savings                      $400.00
+
+2026-07-22 Shell | Gas  ; id:thpu65
+    Liabilities:Credit Card                  $-57.80
+    Expenses:Transportation                   $57.80
+
+2026-07-24 Green Grocer | Groceries  ; id:t9874a
+    Liabilities:Credit Card                 $-124.72
+    Expenses:Groceries                       $124.72
+
+2026-07-27 First Bank | Card payment  ; id:tebt11
+    Assets:Bank:Checking                    $-480.71
+    Liabilities:Credit Card                  $480.71
+
+2026-07-28 First Bank | Interest  ; id:tybz41
+    Assets:Bank:Savings                        $4.82
+    Income:Interest                           $-4.82
+
+2026-08-01 Hometown Mortgage | Mortgage  ; id:tkazwk
+    Assets:Bank:Checking                  $-1,850.00
+    Expenses:Housing                       $1,850.00
+
+2026-08-01 Northwind Corp | Paycheck  ; id:tu9hlv
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-08-03 Green Grocer | Groceries  ; id:td4ztj
+    Liabilities:Credit Card                  $-98.24
+    Expenses:Groceries                        $98.24
+
+2026-08-05 City Power & Light | Electric  ; id:tqwyb1
+    Assets:Bank:Checking                     $-97.33
+    Expenses:Utilities                        $97.33
+
+2026-08-08 Metro Water | Water  ; id:t8u7g0
+    Assets:Bank:Checking                     $-41.71
+    Expenses:Utilities                        $41.71
+
+2026-08-10 Farmers Co-op | Groceries  ; id:te70kc
+    Liabilities:Credit Card                  $-82.97
+    Expenses:Groceries                        $82.97
+
+2026-08-10 Trattoria Roma | Dinner  ; id:tjstyt
+    Liabilities:Credit Card                  $-59.74
+    Expenses:Dining                           $59.74
+
+2026-08-12 FiberNet | Internet  ; id:tf1yez
+    Assets:Bank:Checking                     $-79.99
+    Expenses:Utilities                        $79.99
+
+2026-08-14 Streamly | Subscription  ; id:tkhimo
+    Liabilities:Credit Card                  $-15.99
+    Expenses:Entertainment                    $15.99
+
+2026-08-15 Northwind Corp | Paycheck  ; id:txcqup
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-08-17 MegaMart | Groceries  ; id:tbzt1o
+    Liabilities:Credit Card                  $-95.30
+    Expenses:Groceries                        $95.30
+
+2026-08-18 (1204) Dr. Okafor | Copay  ; id:ti017e
+    Assets:Bank:Checking                     $-40.00
+    Expenses:Health                           $40.00
+
+2026-08-20 Savings transfer | To savings  ; id:t98i1y
+    Assets:Bank:Checking                    $-400.00
+    Assets:Bank:Savings                      $400.00
+
+2026-08-22 Shell | Gas  ; id:t8se98
+    Liabilities:Credit Card                  $-58.43
+    Expenses:Transportation                   $58.43
+
+2026-08-24 Green Grocer | Groceries  ; id:tg25rw
+    Liabilities:Credit Card                 $-106.42
+    Expenses:Groceries                       $106.42
+
+2026-08-27 First Bank | Card payment  ; id:tu8emz
+    Assets:Bank:Checking                    $-659.29
+    Liabilities:Credit Card                  $659.29
+
+2026-08-28 First Bank | Interest  ; id:tfcph9
+    Assets:Bank:Savings                        $4.11
+    Income:Interest                           $-4.11
+
+2026-09-01 Hometown Mortgage | Mortgage  ; id:tzhmfj
+    Assets:Bank:Checking                  $-1,850.00
+    Expenses:Housing                       $1,850.00
+
+2026-09-01 Northwind Corp | Paycheck  ; id:tsidfj
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-09-03 Green Grocer | Groceries  ; id:t7qszc
+    Liabilities:Credit Card                  $-93.25
+    Expenses:Groceries                        $93.25
+
+2026-09-05 City Power & Light | Electric  ; id:tae7ta
+    Assets:Bank:Checking                    $-118.76
+    Expenses:Utilities                       $118.76
+
+2026-09-08 Metro Water | Water  ; id:t4ts5j
+    Assets:Bank:Checking                     $-52.56
+    Expenses:Utilities                        $52.56
+
+2026-09-10 Farmers Co-op | Groceries  ; id:t5znm4
+    Liabilities:Credit Card                 $-117.65
+    Expenses:Groceries                       $117.65
+
+2026-09-10 Trattoria Roma | Dinner  ; id:thnhpz
+    Liabilities:Credit Card                  $-54.65
+    Expenses:Dining                           $54.65
+
+2026-09-12 FiberNet | Internet  ; id:th4hzr
+    Assets:Bank:Checking                     $-79.99
+    Expenses:Utilities                        $79.99
+
+2026-09-14 Streamly | Subscription  ; id:tlwk4i
+    Liabilities:Credit Card                  $-15.99
+    Expenses:Entertainment                    $15.99
+
+2026-09-15 Northwind Corp | Paycheck  ; id:ty3f7p
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-09-17 MegaMart | Groceries  ; id:toekqz
+    Liabilities:Credit Card                 $-113.25
+    Expenses:Groceries                       $113.25
+
+2026-09-18 (1205) Dr. Okafor | Copay  ; id:t5ief3
+    Assets:Bank:Checking                     $-40.00
+    Expenses:Health                           $40.00
+
+2026-09-20 Savings transfer | To savings  ; id:tczm4x
+    Assets:Bank:Checking                    $-400.00
+    Assets:Bank:Savings                      $400.00
+
+2026-09-22 Shell | Gas  ; id:tob31l
+    Liabilities:Credit Card                  $-57.72
+    Expenses:Transportation                   $57.72
+
+2026-09-24 Green Grocer | Groceries  ; id:ti9z6z
+    Liabilities:Credit Card                 $-105.82
+    Expenses:Groceries                       $105.82
+
+2026-09-27 First Bank | Card payment  ; id:tfvpuw
+    Assets:Bank:Checking                    $-464.66
+    Liabilities:Credit Card                  $464.66
+
+2026-09-28 First Bank | Interest  ; id:tbh2ev
+    Assets:Bank:Savings                        $3.11
+    Income:Interest                           $-3.11
+
+2026-10-01 Hometown Mortgage | Mortgage  ; id:tz256c
+    Assets:Bank:Checking                  $-1,850.00
+    Expenses:Housing                       $1,850.00
+
+2026-10-01 Northwind Corp | Paycheck  ; id:tospdb
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-10-03 Green Grocer | Groceries  ; id:tkaq4n
+    Liabilities:Credit Card                 $-148.57
+    Expenses:Groceries                       $148.57
+
+2026-10-05 City Power & Light | Electric  ; id:tx759t
+    Assets:Bank:Checking                     $-96.93
+    Expenses:Utilities                        $96.93
+
+2026-10-08 Metro Water | Water  ; id:tuvbwx
+    Assets:Bank:Checking                     $-41.88
+    Expenses:Utilities                        $41.88
+
+2026-10-10 Farmers Co-op | Groceries  ; id:tojcnd
+    Liabilities:Credit Card                 $-113.76
+    Expenses:Groceries                       $113.76
+
+2026-10-10 Trattoria Roma | Dinner  ; id:tl4h04
+    Liabilities:Credit Card                  $-59.18
+    Expenses:Dining                           $59.18
+
+2026-10-12 FiberNet | Internet  ; id:t3gb8c
+    Assets:Bank:Checking                     $-79.99
+    Expenses:Utilities                        $79.99
+
+2026-10-14 Streamly | Subscription  ; id:txa5w7
+    Liabilities:Credit Card                  $-15.99
+    Expenses:Entertainment                    $15.99
+
+2026-10-15 Northwind Corp | Paycheck  ; id:tf884d
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-10-17 MegaMart | Groceries  ; id:tiysc6
+    Liabilities:Credit Card                  $-84.07
+    Expenses:Groceries                        $84.07
+
+2026-10-18 (1206) Dr. Okafor | Copay  ; id:twcxug
+    Assets:Bank:Checking                     $-40.00
+    Expenses:Health                           $40.00
+
+2026-10-20 Savings transfer | To savings  ; id:tqkcnk
+    Assets:Bank:Checking                    $-400.00
+    Assets:Bank:Savings                      $400.00
+
+2026-10-22 Shell | Gas  ; id:tef9up
+    Liabilities:Credit Card                  $-44.11
+    Expenses:Transportation                   $44.11
+
+2026-10-24 Green Grocer | Groceries  ; id:tll7tf
+    Liabilities:Credit Card                 $-104.48
+    Expenses:Groceries                       $104.48
+
+2026-10-27 First Bank | Card payment  ; id:tijx8o
+    Assets:Bank:Checking                    $-616.11
+    Liabilities:Credit Card                  $616.11
+
+2026-10-28 First Bank | Interest  ; id:ttalt7
+    Assets:Bank:Savings                        $3.85
+    Income:Interest                           $-3.85
+
+2026-11-01 Hometown Mortgage | Mortgage  ; id:tp9u7n
+    Assets:Bank:Checking                  $-1,850.00
+    Expenses:Housing                       $1,850.00
+
+2026-11-01 Northwind Corp | Paycheck  ; id:tubthv
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-11-03 Green Grocer | Groceries  ; id:tv3xvy
+    Liabilities:Credit Card                  $-89.82
+    Expenses:Groceries                        $89.82
+
+2026-11-05 City Power & Light | Electric  ; id:tudwln
+    Assets:Bank:Checking                     $-94.95
+    Expenses:Utilities                        $94.95
+
+2026-11-08 Metro Water | Water  ; id:tebuwm
+    Assets:Bank:Checking                     $-45.63
+    Expenses:Utilities                        $45.63
+
+2026-11-10 Farmers Co-op | Groceries  ; id:t9x5ys
+    Liabilities:Credit Card                 $-147.05
+    Expenses:Groceries                       $147.05
+
+2026-11-10 Trattoria Roma | Dinner  ; id:toxotf
+    Liabilities:Credit Card                  $-76.76
+    Expenses:Dining                           $76.76
+
+2026-11-12 FiberNet | Internet  ; id:tetiqt
+    Assets:Bank:Checking                     $-79.99
+    Expenses:Utilities                        $79.99
+
+2026-11-14 Streamly | Subscription  ; id:t7qjwf
+    Liabilities:Credit Card                  $-15.99
+    Expenses:Entertainment                    $15.99
+
+2026-11-15 Northwind Corp | Paycheck  ; id:tbr10l
+    Assets:Bank:Checking                   $3,150.00
+    Income:Salary                         $-3,150.00
+
+2026-11-17 MegaMart | Groceries  ; id:tstcnz
+    Liabilities:Credit Card                 $-108.92
+    Expenses:Groceries                       $108.92
+
+2026-11-18 (1207) Dr. Okafor | Copay  ; id:tosvrp
+    Assets:Bank:Checking                     $-40.00
+    Expenses:Health                           $40.00
+
+2026-11-20 Savings transfer | To savings  ; id:t38bve
+    Assets:Bank:Checking                    $-400.00
+    Assets:Bank:Savings                      $400.00
+
+; sb:log 2026-11-20T11:31 add tvdz0p 2026-05-04 Opening balances $16,200.00
+; sb:log 2026-11-20T11:31 add t5vjqy 2026-05-01 Hometown Mortgage $1,850.00
+; sb:log 2026-11-20T11:31 add tg71sy 2026-05-01 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add t7jx5y 2026-05-15 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add the3zg 2026-05-05 City Power & Light $75.00
+; sb:log 2026-11-20T11:31 add tgidhu 2026-05-08 Metro Water $53.42
+; sb:log 2026-11-20T11:31 add twmyfg 2026-05-12 FiberNet $79.99
+; sb:log 2026-11-20T11:31 add tcg1mo 2026-05-18 Dr. Okafor $40.00
+; sb:log 2026-11-20T11:31 add tkbob4 2026-05-20 Savings transfer $400.00
+; sb:log 2026-11-20T11:31 add takrmv 2026-05-27 First Bank $522.31
+; sb:log 2026-11-20T11:31 add tqx8hu 2026-05-03 Green Grocer $87.90
+; sb:log 2026-11-20T11:31 add trocht 2026-05-10 Farmers Co-op $132.00
+; sb:log 2026-11-20T11:31 add tamgpw 2026-05-17 MegaMart $115.28
+; sb:log 2026-11-20T11:31 add tkd8km 2026-05-24 Green Grocer $97.99
+; sb:log 2026-11-20T11:31 add to7b3w 2026-05-10 Trattoria Roma $82.60
+; sb:log 2026-11-20T11:31 add t7cgpz 2026-05-22 Shell $53.88
+; sb:log 2026-11-20T11:31 add tt4p4z 2026-05-14 Streamly $15.99
+; sb:log 2026-11-20T11:31 add tn0gn9 2026-05-28 First Bank $4.09
+; sb:log 2026-11-20T11:31 add tss0f3 2026-06-01 Hometown Mortgage $1,850.00
+; sb:log 2026-11-20T11:31 add toi9c6 2026-06-01 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add tsernx 2026-06-15 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add tq8u5v 2026-06-05 City Power & Light $116.07
+; sb:log 2026-11-20T11:31 add tm5q2u 2026-06-08 Metro Water $47.72
+; sb:log 2026-11-20T11:31 add t4qnmu 2026-06-12 FiberNet $79.99
+; sb:log 2026-11-20T11:31 add th449c 2026-06-18 Dr. Okafor $40.00
+; sb:log 2026-11-20T11:31 add ts5ed8 2026-06-20 Savings transfer $400.00
+; sb:log 2026-11-20T11:31 add tc4qps 2026-06-27 First Bank $654.19
+; sb:log 2026-11-20T11:31 add t8cmfy 2026-06-03 Green Grocer $90.57
+; sb:log 2026-11-20T11:31 add tlu4vb 2026-06-10 Farmers Co-op $101.81
+; sb:log 2026-11-20T11:31 add tj1b6k 2026-06-17 MegaMart $130.17
+; sb:log 2026-11-20T11:31 add tt64z6 2026-06-24 Green Grocer $129.33
+; sb:log 2026-11-20T11:31 add t68oep 2026-06-10 Trattoria Roma $47.69
+; sb:log 2026-11-20T11:31 add tmp0op 2026-06-22 Shell $52.10
+; sb:log 2026-11-20T11:31 add tz3zjw 2026-06-14 Streamly $15.99
+; sb:log 2026-11-20T11:31 add tuperw 2026-06-28 First Bank $3.94
+; sb:log 2026-11-20T11:31 add t3aww2 2026-07-01 Hometown Mortgage $1,850.00
+; sb:log 2026-11-20T11:31 add tnkya0 2026-07-01 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add tmj75r 2026-07-15 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add t8zvzh 2026-07-05 City Power & Light $130.34
+; sb:log 2026-11-20T11:31 add txnbvb 2026-07-08 Metro Water $51.15
+; sb:log 2026-11-20T11:31 add td4mpk 2026-07-12 FiberNet $79.99
+; sb:log 2026-11-20T11:31 add trmczs 2026-07-18 Dr. Okafor $40.00
+; sb:log 2026-11-20T11:31 add tzzqma 2026-07-20 Savings transfer $400.00
+; sb:log 2026-11-20T11:31 add tebt11 2026-07-27 First Bank $480.71
+; sb:log 2026-11-20T11:31 add tn32df 2026-07-03 Green Grocer $113.61
+; sb:log 2026-11-20T11:31 add tab8nr 2026-07-10 Farmers Co-op $148.47
+; sb:log 2026-11-20T11:31 add ti8w3h 2026-07-17 MegaMart $128.52
+; sb:log 2026-11-20T11:31 add t9874a 2026-07-24 Green Grocer $124.72
+; sb:log 2026-11-20T11:31 add tshc0r 2026-07-10 Trattoria Roma $73.87
+; sb:log 2026-11-20T11:31 add thpu65 2026-07-22 Shell $57.80
+; sb:log 2026-11-20T11:31 add tc6j0d 2026-07-14 Streamly $15.99
+; sb:log 2026-11-20T11:31 add tybz41 2026-07-28 First Bank $4.82
+; sb:log 2026-11-20T11:31 add tkazwk 2026-08-01 Hometown Mortgage $1,850.00
+; sb:log 2026-11-20T11:31 add tu9hlv 2026-08-01 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add txcqup 2026-08-15 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add tqwyb1 2026-08-05 City Power & Light $97.33
+; sb:log 2026-11-20T11:31 add t8u7g0 2026-08-08 Metro Water $41.71
+; sb:log 2026-11-20T11:31 add tf1yez 2026-08-12 FiberNet $79.99
+; sb:log 2026-11-20T11:31 add ti017e 2026-08-18 Dr. Okafor $40.00
+; sb:log 2026-11-20T11:31 add t98i1y 2026-08-20 Savings transfer $400.00
+; sb:log 2026-11-20T11:31 add tu8emz 2026-08-27 First Bank $659.29
+; sb:log 2026-11-20T11:31 add td4ztj 2026-08-03 Green Grocer $98.24
+; sb:log 2026-11-20T11:31 add te70kc 2026-08-10 Farmers Co-op $82.97
+; sb:log 2026-11-20T11:31 add tbzt1o 2026-08-17 MegaMart $95.30
+; sb:log 2026-11-20T11:31 add tg25rw 2026-08-24 Green Grocer $106.42
+; sb:log 2026-11-20T11:31 add tjstyt 2026-08-10 Trattoria Roma $59.74
+; sb:log 2026-11-20T11:31 add t8se98 2026-08-22 Shell $58.43
+; sb:log 2026-11-20T11:31 add tkhimo 2026-08-14 Streamly $15.99
+; sb:log 2026-11-20T11:31 add tfcph9 2026-08-28 First Bank $4.11
+; sb:log 2026-11-20T11:31 add tzhmfj 2026-09-01 Hometown Mortgage $1,850.00
+; sb:log 2026-11-20T11:31 add tsidfj 2026-09-01 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add ty3f7p 2026-09-15 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add tae7ta 2026-09-05 City Power & Light $118.76
+; sb:log 2026-11-20T11:31 add t4ts5j 2026-09-08 Metro Water $52.56
+; sb:log 2026-11-20T11:31 add th4hzr 2026-09-12 FiberNet $79.99
+; sb:log 2026-11-20T11:31 add t5ief3 2026-09-18 Dr. Okafor $40.00
+; sb:log 2026-11-20T11:31 add tczm4x 2026-09-20 Savings transfer $400.00
+; sb:log 2026-11-20T11:31 add tfvpuw 2026-09-27 First Bank $464.66
+; sb:log 2026-11-20T11:31 add t7qszc 2026-09-03 Green Grocer $93.25
+; sb:log 2026-11-20T11:31 add t5znm4 2026-09-10 Farmers Co-op $117.65
+; sb:log 2026-11-20T11:31 add toekqz 2026-09-17 MegaMart $113.25
+; sb:log 2026-11-20T11:31 add ti9z6z 2026-09-24 Green Grocer $105.82
+; sb:log 2026-11-20T11:31 add thnhpz 2026-09-10 Trattoria Roma $54.65
+; sb:log 2026-11-20T11:31 add tob31l 2026-09-22 Shell $57.72
+; sb:log 2026-11-20T11:31 add tlwk4i 2026-09-14 Streamly $15.99
+; sb:log 2026-11-20T11:31 add tbh2ev 2026-09-28 First Bank $3.11
+; sb:log 2026-11-20T11:31 add tz256c 2026-10-01 Hometown Mortgage $1,850.00
+; sb:log 2026-11-20T11:31 add tospdb 2026-10-01 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add tf884d 2026-10-15 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add tx759t 2026-10-05 City Power & Light $96.93
+; sb:log 2026-11-20T11:31 add tuvbwx 2026-10-08 Metro Water $41.88
+; sb:log 2026-11-20T11:31 add t3gb8c 2026-10-12 FiberNet $79.99
+; sb:log 2026-11-20T11:31 add twcxug 2026-10-18 Dr. Okafor $40.00
+; sb:log 2026-11-20T11:31 add tqkcnk 2026-10-20 Savings transfer $400.00
+; sb:log 2026-11-20T11:31 add tijx8o 2026-10-27 First Bank $616.11
+; sb:log 2026-11-20T11:31 add tkaq4n 2026-10-03 Green Grocer $148.57
+; sb:log 2026-11-20T11:31 add tojcnd 2026-10-10 Farmers Co-op $113.76
+; sb:log 2026-11-20T11:31 add tiysc6 2026-10-17 MegaMart $84.07
+; sb:log 2026-11-20T11:31 add tll7tf 2026-10-24 Green Grocer $104.48
+; sb:log 2026-11-20T11:31 add tl4h04 2026-10-10 Trattoria Roma $59.18
+; sb:log 2026-11-20T11:31 add tef9up 2026-10-22 Shell $44.11
+; sb:log 2026-11-20T11:31 add txa5w7 2026-10-14 Streamly $15.99
+; sb:log 2026-11-20T11:31 add ttalt7 2026-10-28 First Bank $3.85
+; sb:log 2026-11-20T11:31 add tp9u7n 2026-11-01 Hometown Mortgage $1,850.00
+; sb:log 2026-11-20T11:31 add tubthv 2026-11-01 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add tbr10l 2026-11-15 Northwind Corp $3,150.00
+; sb:log 2026-11-20T11:31 add tudwln 2026-11-05 City Power & Light $94.95
+; sb:log 2026-11-20T11:31 add tebuwm 2026-11-08 Metro Water $45.63
+; sb:log 2026-11-20T11:31 add tetiqt 2026-11-12 FiberNet $79.99
+; sb:log 2026-11-20T11:31 add tosvrp 2026-11-18 Dr. Okafor $40.00
+; sb:log 2026-11-20T11:31 add t38bve 2026-11-20 Savings transfer $400.00
+; sb:log 2026-11-20T11:31 add tv3xvy 2026-11-03 Green Grocer $89.82
+; sb:log 2026-11-20T11:31 add t9x5ys 2026-11-10 Farmers Co-op $147.05
+; sb:log 2026-11-20T11:31 add tstcnz 2026-11-17 MegaMart $108.92
+; sb:log 2026-11-20T11:31 add toxotf 2026-11-10 Trattoria Roma $76.76
+; sb:log 2026-11-20T11:31 add t7qjwf 2026-11-14 Streamly $15.99

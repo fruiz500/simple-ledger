@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#1f5f4a"/>
+  <!-- T-account: the classic double-entry symbol -->
+  <rect x="11" y="14" width="42" height="7" rx="2" fill="#fff"/>
+  <rect x="28.5" y="14" width="7" height="38" rx="2" fill="#fff"/>
+  <rect x="13" y="29" width="12" height="5" rx="2" fill="#9fe0c4"/>
+  <rect x="13" y="39" width="12" height="5" rx="2" fill="#9fe0c4"/>
+  <rect x="39" y="34" width="12" height="5" rx="2" fill="#9fe0c4"/>
+</svg>

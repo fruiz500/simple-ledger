@@ -1,0 +1,363 @@
+; sb:book name:"Hillside Design Studio (demo)" template:business fy-start:01
+; sb:biz org:"Hillside Design Studio" address:"12 Hillside Rd%0AEvanston%2C IL 60201" phone:555-0100 email:hello@hillside.example signer:"Alex Rivera" title:Owner footer:"Please pay by check or bank transfer. Thank you!"
+
+commodity $1,000.00
+
+account Assets:Accounts Receivable     ; type:Asset
+account Assets:Checking                ; type:Asset
+account Assets:Savings                 ; type:Asset
+account Equity:Opening Balances        ; type:Equity
+account Equity:Owner Contributions     ; type:Equity
+account Equity:Owner Draws             ; type:Equity
+account Expenses:Advertising           ; type:Expense
+account Expenses:Bank Fees             ; type:Expense
+account Expenses:Contractors           ; type:Expense
+account Expenses:Insurance             ; type:Expense
+account Expenses:Meals                 ; type:Expense
+account Expenses:Office Supplies       ; type:Expense
+account Expenses:Other                 ; type:Expense
+account Expenses:Professional Fees     ; type:Expense
+account Expenses:Rent                  ; type:Expense
+account Expenses:Software              ; type:Expense
+account Expenses:Taxes and Licenses    ; type:Expense
+account Expenses:Travel                ; type:Expense
+account Expenses:Utilities             ; type:Expense
+account Income:Interest                ; type:Revenue
+account Income:Other                   ; type:Revenue
+account Income:Sales                   ; type:Revenue
+account Income:Services                ; type:Revenue
+account Liabilities:Accounts Payable   ; type:Liability
+account Liabilities:Credit Card        ; type:Liability
+account Liabilities:Sales Tax Payable  ; type:Liability
+
+payee Adobe
+payee Alex Rivera
+payee City Power & Light
+payee Corner Cafe
+payee First Bank
+payee Globex Corporation   ; role:customer, email:ap@globex.example, address:1 Main St%0AChicago%2C IL 60601, terms:30
+payee Initech              ; role:customer, address:4120 Freidrich Ln%0AAustin%2C TX 78744, terms:15
+payee Lakeside Realty      ; role:supplier
+payee Mystery Vendor 4471
+payee Paper & Print Co     ; role:supplier, terms:30
+
+2026-05-01 Alex Rivera | Starting capital  ; id:twrngr
+    Assets:Checking                       $25,000.00
+    Equity:Owner Contributions           $-25,000.00
+
+2026-06-01 (2001) Lakeside Realty | Studio rent  ; id:t3a0a7
+    Assets:Checking                       $-1,800.00
+    Expenses:Rent                          $1,800.00
+
+2026-06-03 Adobe | Design software  ; id:t65g5n
+    Liabilities:Credit Card                  $-59.99
+    Expenses:Software                         $59.99
+
+2026-06-05 (1001) Globex Corporation  ; invoice:1001, due:2026-07-05, id:tbyna6
+    Assets:Accounts Receivable             $3,600.00
+    Income:Services                       $-3,500.00  ; desc:Brand design%2C monthly retainer, qty:1, price:3500.00
+    Income:Sales                            $-100.00  ; desc:Stock images, qty:4, price:25.00
+
+2026-06-07 (PP-405) Paper & Print Co  ; bill:PP-405, due:2026-07-07, id:tkneq5
+    Liabilities:Accounts Payable            $-325.00
+    Expenses:Office Supplies                 $325.00  ; desc:Printing and supplies
+
+2026-06-09 City Power & Light | Electric  ; id:tdd7gv
+    Assets:Checking                         $-116.65
+    Expenses:Utilities                       $116.65
+
+2026-06-12 (1002) Initech  ; invoice:1002, due:2026-06-27, id:tnvsqy
+    Assets:Accounts Receivable             $1,140.00
+    Income:Services                       $-1,140.00  ; desc:Website update, qty:12, price:95.00
+
+2026-06-15 Corner Cafe | Client lunch  ; id:t3ebro
+    Liabilities:Credit Card                  $-53.55
+    Expenses:Meals                            $53.55
+
+2026-06-25 First Bank | Card payment  ; id:t65iqa
+    Assets:Checking                         $-300.00
+    Liabilities:Credit Card                  $300.00
+
+2026-07-01 (2002) Lakeside Realty | Studio rent  ; id:tjwbf7
+    Assets:Checking                       $-1,800.00
+    Expenses:Rent                          $1,800.00
+
+2026-07-03 Adobe | Design software  ; id:tc8s2i
+    Liabilities:Credit Card                  $-59.99
+    Expenses:Software                         $59.99
+
+2026-07-04 (ACH) Globex Corporation | Payment of invoice 1001  ; id:tt6oqc
+    Assets:Checking                        $3,600.00
+    Assets:Accounts Receivable            $-3,600.00  ; pays:tbyna6
+
+2026-07-05 (1003) Globex Corporation  ; invoice:1003, due:2026-08-04, id:tkdm1i
+    Assets:Accounts Receivable             $3,600.00
+    Income:Services                       $-3,500.00  ; desc:Brand design%2C monthly retainer, qty:1, price:3500.00
+    Income:Sales                            $-100.00  ; desc:Stock images, qty:4, price:25.00
+
+2026-07-06 (3001) Paper & Print Co | Payment of bill PP-405  ; id:tvah0d
+    Assets:Checking                         $-325.00
+    Liabilities:Accounts Payable             $325.00  ; pays:tkneq5
+
+2026-07-07 (PP-404) Paper & Print Co  ; bill:PP-404, due:2026-08-06, id:tzx0r2
+    Liabilities:Accounts Payable            $-308.00
+    Expenses:Office Supplies                 $308.00  ; desc:Printing and supplies
+
+2026-07-09 City Power & Light | Electric  ; id:tu0ikf
+    Assets:Checking                         $-109.32
+    Expenses:Utilities                       $109.32
+
+2026-07-12 (1004) Initech  ; invoice:1004, due:2026-07-27, id:talxih
+    Assets:Accounts Receivable             $1,140.00
+    Income:Services                       $-1,140.00  ; desc:Website update, qty:12, price:95.00
+
+2026-07-15 Corner Cafe | Client lunch  ; id:tjzmj3
+    Liabilities:Credit Card                  $-50.44
+    Expenses:Meals                            $50.44
+
+2026-07-20 (8805) Initech | Payment of invoice 1002  ; id:ttcqax
+    Assets:Checking                        $1,140.00
+    Assets:Accounts Receivable            $-1,140.00  ; pays:tnvsqy
+
+2026-07-25 First Bank | Card payment  ; id:tt7hmb
+    Assets:Checking                         $-300.00
+    Liabilities:Credit Card                  $300.00
+
+2026-08-01 (2003) Lakeside Realty | Studio rent  ; id:tk0nvj
+    Assets:Checking                       $-1,800.00
+    Expenses:Rent                          $1,800.00
+
+2026-08-03 Adobe | Design software  ; id:t0tnm0
+    Liabilities:Credit Card                  $-59.99
+    Expenses:Software                         $59.99
+
+2026-08-04 (ACH) Globex Corporation | Payment of invoice 1003  ; id:t1urme
+    Assets:Checking                        $3,600.00
+    Assets:Accounts Receivable            $-3,600.00  ; pays:tkdm1i
+
+2026-08-05 (1005) Globex Corporation  ; invoice:1005, due:2026-09-04, id:trhqb2
+    Assets:Accounts Receivable             $3,600.00
+    Income:Services                       $-3,500.00  ; desc:Brand design%2C monthly retainer, qty:1, price:3500.00
+    Income:Sales                            $-100.00  ; desc:Stock images, qty:4, price:25.00
+
+2026-08-06 (3002) Paper & Print Co | Payment of bill PP-404  ; id:twq1zo
+    Assets:Checking                         $-308.00
+    Liabilities:Accounts Payable             $308.00  ; pays:tzx0r2
+
+2026-08-07 (PP-403) Paper & Print Co  ; bill:PP-403, due:2026-09-06, id:tuc3h8
+    Liabilities:Accounts Payable            $-291.00
+    Expenses:Office Supplies                 $291.00  ; desc:Printing and supplies
+
+2026-08-09 City Power & Light | Electric  ; id:t4l5c4
+    Assets:Checking                         $-101.99
+    Expenses:Utilities                       $101.99
+
+2026-08-12 (1006) Initech  ; invoice:1006, due:2026-08-27, id:tgjcke
+    Assets:Accounts Receivable             $1,140.00
+    Income:Services                       $-1,140.00  ; desc:Website update, qty:12, price:95.00
+
+2026-08-15 Corner Cafe | Client lunch  ; id:tglrhm
+    Liabilities:Credit Card                  $-47.33
+    Expenses:Meals                            $47.33
+
+2026-08-20 (8804) Initech | Payment of invoice 1004  ; id:tzr174
+    Assets:Checking                        $1,140.00
+    Assets:Accounts Receivable            $-1,140.00  ; pays:talxih
+
+2026-08-25 First Bank | Card payment  ; id:thx5an
+    Assets:Checking                         $-300.00
+    Liabilities:Credit Card                  $300.00
+
+2026-09-01 (2004) Lakeside Realty | Studio rent  ; id:tfox74
+    Assets:Checking                       $-1,800.00
+    Expenses:Rent                          $1,800.00
+
+2026-09-03 Adobe | Design software  ; id:t7aitd
+    Liabilities:Credit Card                  $-59.99
+    Expenses:Software                         $59.99
+
+2026-09-04 (ACH) Globex Corporation | Payment of invoice 1005  ; id:t7vvca
+    Assets:Checking                        $3,600.00
+    Assets:Accounts Receivable            $-3,600.00  ; pays:trhqb2
+
+2026-09-05 (1007) Globex Corporation  ; invoice:1007, due:2026-10-05, id:t0l79x
+    Assets:Accounts Receivable             $3,600.00
+    Income:Services                       $-3,500.00  ; desc:Brand design%2C monthly retainer, qty:1, price:3500.00
+    Income:Sales                            $-100.00  ; desc:Stock images, qty:4, price:25.00
+
+2026-09-06 (3003) Paper & Print Co | Payment of bill PP-403  ; id:tg21hw
+    Assets:Checking                         $-291.00
+    Liabilities:Accounts Payable             $291.00  ; pays:tuc3h8
+
+2026-09-07 (PP-402) Paper & Print Co  ; bill:PP-402, due:2026-10-07, id:to7jha
+    Liabilities:Accounts Payable            $-274.00
+    Expenses:Office Supplies                 $274.00  ; desc:Printing and supplies
+
+2026-09-09 City Power & Light | Electric  ; id:t7nwnd
+    Assets:Checking                          $-94.66
+    Expenses:Utilities                        $94.66
+
+2026-09-12 (1008) Initech  ; invoice:1008, due:2026-09-27, id:t0wnha
+    Assets:Accounts Receivable             $1,140.00
+    Income:Services                       $-1,140.00  ; desc:Website update, qty:12, price:95.00
+
+2026-09-15 Corner Cafe | Client lunch  ; id:thg5fv
+    Liabilities:Credit Card                  $-44.22
+    Expenses:Meals                            $44.22
+
+2026-09-20 (8803) Initech | Payment of invoice 1006  ; id:t315ii
+    Assets:Checking                        $1,140.00
+    Assets:Accounts Receivable            $-1,140.00  ; pays:tgjcke
+
+2026-09-25 First Bank | Card payment  ; id:tss039
+    Assets:Checking                         $-300.00
+    Liabilities:Credit Card                  $300.00
+
+2026-10-01 (2005) Lakeside Realty | Studio rent  ; id:t2uhwq
+    Assets:Checking                       $-1,800.00
+    Expenses:Rent                          $1,800.00
+
+2026-10-03 Adobe | Design software  ; id:t7fkwq
+    Liabilities:Credit Card                  $-59.99
+    Expenses:Software                         $59.99
+
+2026-10-04 (ACH) Globex Corporation | Payment of invoice 1007  ; id:ts4xmm
+    Assets:Checking                        $3,600.00
+    Assets:Accounts Receivable            $-3,600.00  ; pays:t0l79x
+
+2026-10-05 (1009) Globex Corporation  ; invoice:1009, due:2026-11-04, id:t3ted1
+    Assets:Accounts Receivable             $3,600.00
+    Income:Services                       $-3,500.00  ; desc:Brand design%2C monthly retainer, qty:1, price:3500.00
+    Income:Sales                            $-100.00  ; desc:Stock images, qty:4, price:25.00
+
+2026-10-06 (3004) Paper & Print Co | Payment of bill PP-402  ; id:t7fsaj
+    Assets:Checking                         $-274.00
+    Liabilities:Accounts Payable             $274.00  ; pays:to7jha
+
+2026-10-07 (PP-401) Paper & Print Co  ; bill:PP-401, due:2026-11-06, id:tnfpzz
+    Liabilities:Accounts Payable            $-257.00
+    Expenses:Office Supplies                 $257.00  ; desc:Printing and supplies
+
+2026-10-09 City Power & Light | Electric  ; id:tw742n
+    Assets:Checking                          $-87.33
+    Expenses:Utilities                        $87.33
+
+2026-10-12 (1010) Initech  ; invoice:1010, due:2026-10-27, id:trpx7h
+    Assets:Accounts Receivable             $1,140.00
+    Income:Services                       $-1,140.00  ; desc:Website update, qty:12, price:95.00
+
+2026-10-15 Corner Cafe | Client lunch  ; id:t7gvh7
+    Liabilities:Credit Card                  $-41.11
+    Expenses:Meals                            $41.11
+
+2026-10-20 (8802) Initech | Payment of invoice 1008  ; id:txkhr4
+    Assets:Checking                        $1,140.00
+    Assets:Accounts Receivable            $-1,140.00  ; pays:t0wnha
+
+2026-10-25 First Bank | Card payment  ; id:t6noyy
+    Assets:Checking                         $-300.00
+    Liabilities:Credit Card                  $300.00
+
+2026-11-01 (2006) Lakeside Realty | Studio rent  ; id:t0hayr
+    Assets:Checking                       $-1,800.00
+    Expenses:Rent                          $1,800.00
+
+2026-11-02 Mystery Vendor 4471 | Unknown charge  ; id:t6bfkn
+    Liabilities:Credit Card                  $-49.00
+    Expenses:Other                            $49.00
+
+2026-11-02 Mystery Vendor 4471 | Unknown charge  ; id:t92ev1
+    Liabilities:Credit Card                  $-49.00
+    Expenses:Other                            $49.00
+
+2026-11-03 Adobe | Design software  ; id:t0x8gp
+    Liabilities:Credit Card                  $-59.99
+    Expenses:Software                         $59.99
+
+2026-11-05 (1011) Globex Corporation  ; invoice:1011, due:2026-12-05, id:t3t942
+    Assets:Accounts Receivable             $3,600.00
+    Income:Services                       $-3,500.00  ; desc:Brand design%2C monthly retainer, qty:1, price:3500.00
+    Income:Sales                            $-100.00  ; desc:Stock images, qty:4, price:25.00
+
+2026-11-07 (PP-400) Paper & Print Co  ; bill:PP-400, due:2026-12-07, id:tf3qgv
+    Liabilities:Accounts Payable            $-240.00
+    Expenses:Office Supplies                 $240.00  ; desc:Printing and supplies
+
+2026-11-09 City Power & Light | Electric  ; id:t3nykb
+    Assets:Checking                          $-80.00
+    Expenses:Utilities                        $80.00
+
+2026-11-12 (1012) Initech  ; invoice:1012, due:2026-11-27, id:t0ugir
+    Assets:Accounts Receivable             $1,140.00
+    Income:Services                       $-1,140.00  ; desc:Website update, qty:12, price:95.00
+
+2026-11-15 Corner Cafe | Client lunch  ; id:t71gq4
+    Liabilities:Credit Card                  $-38.00
+    Expenses:Meals                            $38.00
+
+; sb:log 2026-11-20T11:26 add-contact - Globex Corporation
+; sb:log 2026-11-20T11:26 add-contact - Initech
+; sb:log 2026-11-20T11:26 add-contact - Paper & Print Co
+; sb:log 2026-11-20T11:26 add-contact - Lakeside Realty
+; sb:log 2026-11-20T11:26 add twrngr 2026-05-01 Alex Rivera $25,000.00
+; sb:log 2026-11-20T11:26 add t3a0a7 2026-06-01 Lakeside Realty $1,800.00
+; sb:log 2026-11-20T11:26 add t65g5n 2026-06-03 Adobe $59.99
+; sb:log 2026-11-20T11:26 add tdd7gv 2026-06-09 City Power & Light $116.65
+; sb:log 2026-11-20T11:26 add t3ebro 2026-06-15 Corner Cafe $53.55
+; sb:log 2026-11-20T11:26 add t65iqa 2026-06-25 First Bank $300.00
+; sb:log 2026-11-20T11:26 add tbyna6 2026-06-05 Globex Corporation $3,600.00
+; sb:log 2026-11-20T11:26 add tnvsqy 2026-06-12 Initech $1,140.00
+; sb:log 2026-11-20T11:26 add tkneq5 2026-06-07 Paper & Print Co $325.00
+; sb:log 2026-11-20T11:26 add tvah0d 2026-07-06 Paper & Print Co $325.00
+; sb:log 2026-11-20T11:26 add tjwbf7 2026-07-01 Lakeside Realty $1,800.00
+; sb:log 2026-11-20T11:26 add tc8s2i 2026-07-03 Adobe $59.99
+; sb:log 2026-11-20T11:26 add tu0ikf 2026-07-09 City Power & Light $109.32
+; sb:log 2026-11-20T11:26 add tjzmj3 2026-07-15 Corner Cafe $50.44
+; sb:log 2026-11-20T11:26 add tt7hmb 2026-07-25 First Bank $300.00
+; sb:log 2026-11-20T11:26 add tkdm1i 2026-07-05 Globex Corporation $3,600.00
+; sb:log 2026-11-20T11:26 add talxih 2026-07-12 Initech $1,140.00
+; sb:log 2026-11-20T11:26 add tzx0r2 2026-07-07 Paper & Print Co $308.00
+; sb:log 2026-11-20T11:26 add twq1zo 2026-08-06 Paper & Print Co $308.00
+; sb:log 2026-11-20T11:26 add tk0nvj 2026-08-01 Lakeside Realty $1,800.00
+; sb:log 2026-11-20T11:26 add t0tnm0 2026-08-03 Adobe $59.99
+; sb:log 2026-11-20T11:26 add t4l5c4 2026-08-09 City Power & Light $101.99
+; sb:log 2026-11-20T11:26 add tglrhm 2026-08-15 Corner Cafe $47.33
+; sb:log 2026-11-20T11:26 add thx5an 2026-08-25 First Bank $300.00
+; sb:log 2026-11-20T11:26 add trhqb2 2026-08-05 Globex Corporation $3,600.00
+; sb:log 2026-11-20T11:26 add tgjcke 2026-08-12 Initech $1,140.00
+; sb:log 2026-11-20T11:26 add tuc3h8 2026-08-07 Paper & Print Co $291.00
+; sb:log 2026-11-20T11:26 add tg21hw 2026-09-06 Paper & Print Co $291.00
+; sb:log 2026-11-20T11:26 add tfox74 2026-09-01 Lakeside Realty $1,800.00
+; sb:log 2026-11-20T11:26 add t7aitd 2026-09-03 Adobe $59.99
+; sb:log 2026-11-20T11:26 add t7nwnd 2026-09-09 City Power & Light $94.66
+; sb:log 2026-11-20T11:26 add thg5fv 2026-09-15 Corner Cafe $44.22
+; sb:log 2026-11-20T11:26 add tss039 2026-09-25 First Bank $300.00
+; sb:log 2026-11-20T11:26 add t0l79x 2026-09-05 Globex Corporation $3,600.00
+; sb:log 2026-11-20T11:26 add t0wnha 2026-09-12 Initech $1,140.00
+; sb:log 2026-11-20T11:26 add to7jha 2026-09-07 Paper & Print Co $274.00
+; sb:log 2026-11-20T11:26 add t7fsaj 2026-10-06 Paper & Print Co $274.00
+; sb:log 2026-11-20T11:26 add t2uhwq 2026-10-01 Lakeside Realty $1,800.00
+; sb:log 2026-11-20T11:26 add t7fkwq 2026-10-03 Adobe $59.99
+; sb:log 2026-11-20T11:26 add tw742n 2026-10-09 City Power & Light $87.33
+; sb:log 2026-11-20T11:26 add t7gvh7 2026-10-15 Corner Cafe $41.11
+; sb:log 2026-11-20T11:26 add t6noyy 2026-10-25 First Bank $300.00
+; sb:log 2026-11-20T11:26 add t3ted1 2026-10-05 Globex Corporation $3,600.00
+; sb:log 2026-11-20T11:26 add trpx7h 2026-10-12 Initech $1,140.00
+; sb:log 2026-11-20T11:26 add tnfpzz 2026-10-07 Paper & Print Co $257.00
+; sb:log 2026-11-20T11:26 add t0hayr 2026-11-01 Lakeside Realty $1,800.00
+; sb:log 2026-11-20T11:26 add t0x8gp 2026-11-03 Adobe $59.99
+; sb:log 2026-11-20T11:26 add t3nykb 2026-11-09 City Power & Light $80.00
+; sb:log 2026-11-20T11:26 add t71gq4 2026-11-15 Corner Cafe $38.00
+; sb:log 2026-11-20T11:26 add t3t942 2026-11-05 Globex Corporation $3,600.00
+; sb:log 2026-11-20T11:26 add t0ugir 2026-11-12 Initech $1,140.00
+; sb:log 2026-11-20T11:26 add tf3qgv 2026-11-07 Paper & Print Co $240.00
+; sb:log 2026-11-20T11:26 add tt6oqc 2026-07-04 Globex Corporation $3,600.00
+; sb:log 2026-11-20T11:26 add ttcqax 2026-07-20 Initech $1,140.00
+; sb:log 2026-11-20T11:26 add t1urme 2026-08-04 Globex Corporation $3,600.00
+; sb:log 2026-11-20T11:26 add tzr174 2026-08-20 Initech $1,140.00
+; sb:log 2026-11-20T11:26 add t7vvca 2026-09-04 Globex Corporation $3,600.00
+; sb:log 2026-11-20T11:26 add t315ii 2026-09-20 Initech $1,140.00
+; sb:log 2026-11-20T11:26 add ts4xmm 2026-10-04 Globex Corporation $3,600.00
+; sb:log 2026-11-20T11:26 add txkhr4 2026-10-20 Initech $1,140.00
+; sb:log 2026-11-20T11:26 add t6bfkn 2026-11-02 Mystery Vendor 4471 $49.00
+; sb:log 2026-11-20T11:26 add t92ev1 2026-11-02 Mystery Vendor 4471 $49.00
